@@ -3,12 +3,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <title>{{titulo}}</title>
 
-
-
+    {{include('header.html')}}
   </head>
-  
-      ddddddddddddddddddddddddddddddddddd
+  <body class="container text-center">
+	{{include('cabeca.html')}}
+	
+      {{colonia}}
+      {{data_inicio}}
+      {{data_fim}}
+      
+      <div class="row">
+      {% for apto in aptos %}
+       	 <div class="col-md-4 text-left">
+		 <label for="Nome">Apto-{{apto}}</label>
+		</div>
+      
 
+
+
+      {% endfor %}
+      </div>
+      
+      
   </body>
 </html>
