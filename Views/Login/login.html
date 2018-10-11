@@ -1,0 +1,42 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>{{titulo}}</title>
+
+    {{include('header_login.html')}}
+  </head>
+
+  <body class="text-center">
+    <form class="form-signin" action="./index.php?tipo=admin" method="post">
+      <h1 class="h3 mb-3 font-weight-normal">Login</h1>
+	{% if erro %}
+		<div class="alert alert-danger">
+			Um erro ocorreu!
+		</div>
+	{% endif %}
+	{% if sucesso %}
+		<div class="alert alert-success">
+			Dados salvos com sucesso!
+		</div>
+	{% endif %}
+      <label for="inputCPF" class="sr-only">CPF</label>
+      <input type="text" name="cpf" id="inputCPF" class="form-control" placeholder="000.000.000-00" value="{{cpf}}" required="" autofocus="">
+      <label for="inputPassword" class="sr-only">Senha</label>
+      <input type="password" name="senha" id="inputPassword" class="form-control" placeholder="Senha" required="">
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+
+
+
+      <a href="index.php?tipo=cadastro">Fazer cadastro</a> <br>
+
+
+      <p class="mt-5 mb-3 text-muted">© 2017-2018</p>
+    </form>
+    
+    
+
+
+</body></html>

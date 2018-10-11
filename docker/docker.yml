@@ -1,0 +1,26 @@
+version: "2"
+services:
+
+  php72-twigbootstrap:
+    build:
+      context: ./
+      dockerfile: php72.dockerfile
+    working_dir: /var/www/files
+    volumes:
+      - ../:/var/www/files
+    environment:
+          XDEBUG_CONFIG: remote_host=172.18.0.1
+
+  nginx-twigbootstrap:
+    build:
+      context: ./
+      dockerfile: nginx.dockerfile
+    working_dir: /var/www/files
+    volumes_from:
+      - php72-twigbootstrap
+    depends_on:
+      - php72-twigbootstrap
+    ports:
+      - 12072:80
+    environment:
+          XDEBUG_CONFIG: remote_host=172.18.0.1

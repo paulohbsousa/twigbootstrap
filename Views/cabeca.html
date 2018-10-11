@@ -1,0 +1,92 @@
+
+ <div class="row">
+    <div class="col-md-12 text-center">
+       	<img src="../twigbootstrap-master/image/Banner_sistema.png" class="img-fluid" alt="Responsive image">
+    </div>
+ </div>
+
+
+  <body class="container text-center">
+<nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Meu cadastro
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="index.php?tipo=meusdados">Meus Dados</a>
+          <a class="dropdown-item" href="index.php?tipo=minhasreservas">Minhas Reservas</a>
+          <a class="dropdown-item" href="index.php?tipo=reservas">Reversas</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Sair</a>
+        </div>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0" method="POST" action="index.php?tipo=reservas&acao=reservas">
+       <select class="custom-select" id="inputGroupSelect01" name="vcolonia">
+         <option selected>Seleciona Colônia</option>
+         <option value="1">Itapoa</option>
+         <option value="2">Guaratuba</option>
+         <option value="3">Casa de Curitiba</option>
+      </select>
+
+
+
+
+
+
+
+
+
+
+
+      <input id="datetimepicker"  type="text" name="vdtfim" class="form-control mr-sm-2" >
+      <span class="add-on">
+        <i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
+      </span>
+
+    <script type="text/javascript"
+     src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+    </script>
+    <script type="text/javascript"
+     src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js">
+    </script>
+    <script type="text/javascript"
+     src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.min.js">
+    </script>
+    <script type="text/javascript"
+     src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.pt-BR.js">
+    </script>
+    <script type="text/javascript">
+      $('#datetimepicker').datetimepicker({
+        format: 'dd/MM/yyyy hh:mm:ss',
+        language: 'pt-BR'
+      });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <input name="vdtfim" class="form-control mr-sm-2" type="search" placeholder="00/00/0000" aria-label="Search">
+
+      <button class="btn btn btn-primary my-2 my-sm-0" type="submit">Pesquisar Apartamento</button>
+
+    </form>
+  </div>
+</nav>
+</body>
