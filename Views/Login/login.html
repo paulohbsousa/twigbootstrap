@@ -6,12 +6,17 @@
 
     <title>{{titulo}}</title>
 
+<<<<<<< HEAD
     {{include('header_login.html')}}
+=======
+    {{include('header.html')}}
+>>>>>>> cac39e3d00a2a707f16f5dddb97f9737e65b0bec
   </head>
 
   <body class="text-center">
     <form class="form-signin" action="./index.php?tipo=admin" method="post">
       <h1 class="h3 mb-3 font-weight-normal">Login</h1>
+<<<<<<< HEAD
 	{% if erro %}
 		<div class="alert alert-danger">
 			Um erro ocorreu!
@@ -40,3 +45,15 @@
 
 
 </body></html>
+=======
+      <label for="inputEmail" class="sr-only">Email</label>
+      <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email" required="" autofocus="">
+      <label for="inputPassword" class="sr-only">Senha</label>
+      <input type="password" name="senha" id="inputPassword" class="form-control" placeholder="Senha" required="">
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+      <p class="mt-5 mb-3 text-muted">© 2017-2018</p>
+    </form>
+  
+
+</body></html>
+>>>>>>> cac39e3d00a2a707f16f5dddb97f9737e65b0bec

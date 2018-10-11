@@ -4,6 +4,7 @@ class Admin extends Controller {
 	
 	public function run(){
 		$vars = $this->getVars();
+<<<<<<< HEAD
 		if  ($vars['cpf'] && $vars['senha']){
 			if (!Session::hasLogin() ){
 				$selectLogin = Mysql::select('app','SELECT * FROM cadastros_tb WHERE cpf=:cpf AND senha=:senha LIMIT 1',array(
@@ -30,3 +31,17 @@ class Admin extends Controller {
 	}
 
 }
+=======
+		if ($vars['email'] == 'teste@teste.com' && $vars['senha'] == 'teste'){
+			Session::login($vars['email']);
+		}
+
+		if (Session::hasLogin()){
+			echo $this->getRender()->render('./Admin/admin.html', array('titulo' => 'Página de admin'));
+		} else {
+			echo $this->getRender()->render('./Login/login.html', array('titulo' => 'Página de Login'));
+		}
+	}
+
+}
+>>>>>>> cac39e3d00a2a707f16f5dddb97f9737e65b0bec
