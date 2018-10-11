@@ -1,5 +1,4 @@
 <?php
-<<<<<<< HEAD
 require('vendor/autoload.php');
 /*Libs*/
 require('Libs/Session.php');
@@ -25,10 +24,6 @@ try{
 
 	$tipo = isset($_REQUEST['tipo']) ? $_REQUEST['tipo'] : '';
 
-#print("$tipo|$acao|$vcolonia|$vdtfim");
-#if($tipo<>""){
-# exit;
-#}
 	switch ($tipo){
 		case 'admin':
 			$handler = new Admin($_REQUEST);
@@ -56,32 +51,3 @@ try{
 	echo "Ocorreu um erro!";
 	error_log($e->getMessage(),3,sys_get_temp_dir()."/error.log");
 }
-=======
-
-require('vendor/autoload.php');
-require('Libs/Session.php');
-require('Controllers/Controller.php');
-require('Controllers/Admin.php');
-require('Controllers/Login.php');
-
-
-Session::start();
-
-$loader = new Twig_Loader_Filesystem(__DIR__.'/Views/');
-Controller::setRender( new Twig_Environment($loader) );
-
-$tipo = isset($_REQUEST['tipo']) ? $_REQUEST['tipo'] : '';
-
-switch ($tipo){
-	case 'admin':
-		$handler = new Admin($_REQUEST);
-	break;
-	default:
-	case 'login':
-		$handler = new Login($_REQUEST);
-	break;
-}
-
-$handler->run();
-
->>>>>>> cac39e3d00a2a707f16f5dddb97f9737e65b0bec
